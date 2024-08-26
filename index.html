@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="./data.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <div class="header__filters"></div>
+          <button class="header__btn">
+            <span>Корзина</span>
+            <span class="header__count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="products">
+        <div class="container">
+          <h2 class="products__title" id="breakfast">Завтрак</h2>
+          <div class="products__body products-breakfast" id="1"></div>
+          <h2 class="products__title" id="pizza">Пиццы</h2>
+          <div class="products__body products-pizza" id="2"></div>
+          <h2 class="products__title" id="drink">Напитки</h2>
+          <div class="products__body products-drink" id="3"></div>
+          <h2 class="products__title" id="desserts">Десерты</h2>
+          <div class="products__body products-desserts" id="4"></div>
+        </div>
+      </section>
+
+      <section class="cart">
+        <div class="cart__body">
+          <div class="cart__close">
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.3 5.3a1 1 0 111.4 1.4L13.42 12l5.3 5.3a1 1 0 11-1.42 1.4L12 13.42l-5.3 5.3a1 1 0 01-1.4-1.42l5.28-5.3-5.3-5.3A1 1 0 016.7 5.3l5.3 5.28 5.3-5.3z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="cart__title">
+            <span class="cart__count">2</span> товара на
+            <span class="cart__price">179</span>₽
+          </h2>
+          <div class="cart__products"></div>
+          <div class="cart__info">
+            <p class="cart__info-fullprice">537 ₽</p>
+            <button class="cart__info-btn">К оформлению</button>
+          </div>
+        </div>
+      </section>
+      <section class="modal">
+        <div class="modal__container">
+          <div class="modal__close">
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.3 5.3a1 1 0 111.4 1.4L13.42 12l5.3 5.3a1 1 0 11-1.42 1.4L12 13.42l-5.3 5.3a1 1 0 01-1.4-1.42l5.28-5.3-5.3-5.3A1 1 0 016.7 5.3l5.3 5.28 5.3-5.3z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </div>
+          <img
+            class="modal__img"
+            src="https://media.dodostatic.net/image/r:292x292/11EE89F1F4E61C6F8AE73D7EFBE41559.avif"
+            alt=""
+          />
+          <div class="modal__info">
+            <h2 class="modal__title">Кола</h2>
+            <p class="modal__weight">330г</p>
+            <p class="modal__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates reprehenderit non beatae quas! Rerum, ipsam.
+            </p>
+            <div class="modal__values">
+              <p class="modal__gramm">Пищевая ценность на 100г</p>
+              <div class="modal__value">
+                <span> энерг.ценность </span>
+                <span class="modal__item"> 2.8г </span>
+              </div>
+              <div class="modal__value">
+                <span> белки </span>
+                <span class="modal__item"> 2.8г </span>
+              </div>
+              <div class="modal__value">
+                <span> жиры </span>
+                <span class="modal__item"> 2.8г </span>
+              </div>
+              <div class="modal__value">
+                <span> углеводы </span>
+                <span class="modal__item"> 2.8г </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <template class="product__template">
+      <div class="product">
+        <div class="product__img">
+          <img
+            class="img"
+            src="https://media.dodostatic.net/image/r:292x292/11EE7D61B73F8C48897158D16A60E013.avif"
+            alt=""
+          />
+        </div>
+        <div class="product__body">
+          <div class="product__top">
+            <h3 class="product__title">Сырники</h3>
+            <p class="product__text">
+              Любимый десерт многих наших гостей — румяные сырники из печи.
+              Такие нежные, в меру сладкие и напоминающие детство
+            </p>
+          </div>
+          <div class="product__bottom">
+            <div class="product__price">199 ₽</div>
+            <button class="product__btn">В корзину</button>
+            <div class="cart__counter hidden">
+              <button class="cart__minus">–</button>
+              <span class="cart__product-count"> 1 </span>
+              <button class="cart__plus">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template class="filter__template">
+      <a class="header__filter">Все</a>
+    </template>
+    <template class="cart__template">
+      <div class="cart__product">
+        <div class="cart__top">
+          <div class="cart__left">
+            <img
+              class="cart__img"
+              src="https://media.dodostatic.net/image/r:292x292/11EE7D61B73F8C48897158D16A60E013.avif"
+              alt=""
+            />
+            <p class="cart__name">Омлет с пепперони</p>
+          </div>
+          <button class="cart__btn">
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.3 5.3a1 1 0 111.4 1.4L13.42 12l5.3 5.3a1 1 0 11-1.42 1.4L12 13.42l-5.3 5.3a1 1 0 01-1.4-1.42l5.28-5.3-5.3-5.3A1 1 0 016.7 5.3l5.3 5.28 5.3-5.3z"
+                fill="#000000"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="cart__bottom">
+          <p class="cart__product-price">179 ₽</p>
+          <div class="cart__counter">
+            <button class="cart__minus">–</button>
+            <span class="cart__product-count"> 1 </span>
+            <button class="cart__plus">+</button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
